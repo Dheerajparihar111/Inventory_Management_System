@@ -13,10 +13,12 @@ public class Main {
 
         do {
 
-            System.out.println("\n===== INVENTORY =====");
-            System.out.println("1 Add");
-            System.out.println("2 View");
-            System.out.println("3 Exit");
+            System.out.println("===== INVENTORY ======");
+            System.out.println("| 1) Add             |");
+            System.out.println("| 2) View            |");
+            System.out.println("| 3) Exit            |");
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
+            System.out.print("Enter Your Choice : ");
 
             choice = input.nextInt();
             input.nextLine();
