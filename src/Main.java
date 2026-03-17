@@ -1,13 +1,73 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+import java.util.*;
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
+public class Main {
+
+    static Product[] items = new Product[10];
+    static int count = 0;
+
+    static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        int choice;
+
+        do {
+
+            System.out.println("\n===== INVENTORY =====");
+            System.out.println("1 Add");
+            System.out.println("2 View");
+            System.out.println("3 Exit");
+
+            choice = input.nextInt();
+            input.nextLine();
+
+            switch (choice) {
+
+                case 1:
+                    addItem();
+                    break;
+
+                case 2:
+                    viewItem();
+                    break;
+
+            }
+
+        } while (choice != 3);
+
+    }
+
+
+    static void addItem() {
+
+        if (count >= 10) {
+            System.out.println("Full");
+            return;
+        }
+
+        Product p = new Product();
+
+        System.out.print("Name: ");
+        String name = input.nextLine();
+
+        System.out.print("Qty: ");
+        int q = input.nextInt();
+        input.nextLine();
+
+        p.setData(name, q);
+
+        items[count] = p;
+        count++;
+
+    }
+
+
+    static void viewItem() {
+
+        for (int i = 0; i < count; i++) {
+            items[i].display();
+        }
+
+    }
+
 }
