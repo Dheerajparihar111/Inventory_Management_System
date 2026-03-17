@@ -25,12 +25,15 @@ public class Main {
 
                 case 1:
                     addItem();
+                    System.out.println("Item Added Successfully");
                     break;
 
                 case 2:
                     viewItem();
                     break;
-
+                case 3:
+                    System.out.println("Thank You For Using Inventory Management System");
+                    System.exit(0);
             }
 
         } while (choice != 3);
