@@ -17,7 +17,7 @@ public class Main {
             System.out.println("1 Add");
             System.out.println("2 View");
             System.out.println("3 Update");
-            System.out.println("4 Exit");
+            System.out.println("4 search");
 
             choice = input.nextInt();
             input.nextLine();
@@ -34,7 +34,9 @@ public class Main {
                 case 3:
                     updateItem();
                     break;
-
+                case 4:
+                    searchItem();
+                    break;
             }
 
         } while (choice != 5);
@@ -78,7 +80,22 @@ public class Main {
         }
 
     }
+    static void searchItem() {
 
+        System.out.print("Enter name: ");
+        String name = input.nextLine();
+
+        for (int i = 0; i < count; i++) {
+
+            if (items[i].name.equalsIgnoreCase(name)) {
+
+                items[i].display();
+                return;
+            }
+        }
+
+        System.out.println("Not found");
+    }
 
 
 
