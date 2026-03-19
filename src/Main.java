@@ -16,9 +16,11 @@ public class Main {
             System.out.println("\n===== INVENTORY =====");
             System.out.println("1 Add");
             System.out.println("2 View");
-            System.out.println("3 Update");
-            System.out.println("4 search");
-            System.out.println("5 Remove ");
+            System.out.println("3 Search");
+            System.out.println("4 Update");
+            System.out.println("5 Remove");
+            System.out.println("6 Exit");
+
             choice = input.nextInt();
             input.nextLine();
 
@@ -31,15 +33,19 @@ public class Main {
                 case 2:
                     viewItem();
                     break;
+
                 case 3:
-                    updateItem();
-                    break;
-                case 4:
                     searchItem();
                     break;
+
+                case 4:
+                    updateItem();
+                    break;
+
                 case 5:
                     removeItem();
                     break;
+
             }
 
         } while (choice != 6);
@@ -61,9 +67,12 @@ public class Main {
 
         System.out.print("Qty: ");
         int q = input.nextInt();
+
+        System.out.print("Price: ");
+        double price = input.nextDouble();
         input.nextLine();
 
-        p.setData(name, q);
+        p.setData(name, q, price);
 
         items[count] = p;
         count++;
@@ -83,6 +92,8 @@ public class Main {
         }
 
     }
+
+
     static void searchItem() {
 
         System.out.print("Enter name: ");
@@ -101,8 +112,6 @@ public class Main {
     }
 
 
-
-
     static void updateItem() {
 
         System.out.print("Enter name: ");
@@ -114,9 +123,13 @@ public class Main {
 
                 System.out.print("New qty: ");
                 int q = input.nextInt();
+
+                System.out.print("New price: ");
+                double p = input.nextDouble();
                 input.nextLine();
 
                 items[i].quantity = q;
+                items[i].price = p;
 
                 System.out.println("Updated");
                 return;
@@ -125,6 +138,8 @@ public class Main {
 
         System.out.println("Not found");
     }
+
+
     static void removeItem() {
 
         System.out.print("Enter name: ");
@@ -147,4 +162,5 @@ public class Main {
 
         System.out.println("Not found");
     }
+
 }
