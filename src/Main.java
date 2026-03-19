@@ -13,13 +13,15 @@ public class Main {
 
         do {
 
-            System.out.println("\n===== INVENTORY =====");
-            System.out.println("1 Add");
-            System.out.println("2 View");
-            System.out.println("3 Search");
-            System.out.println("4 Update");
-            System.out.println("5 Remove");
-            System.out.println("6 Exit");
+            System.out.println("===== INVENTORY =====");
+            System.out.println("| 1) Add             |");
+            System.out.println("| 2) View            |");
+            System.out.println("| 3) Search          |");
+            System.out.println("| 4) Update          |");
+            System.out.println("| 5) Remove          |");
+            System.out.println("| 6) Exit            |");
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
+            System.out.print("Enter Your Choice :");
 
             choice = input.nextInt();
             input.nextLine();
@@ -46,6 +48,9 @@ public class Main {
                     removeItem();
                     break;
 
+                case 6:
+                    System.out.println("Thank You For Using Inventory Management System");
+                    System.exit(0);
             }
 
         } while (choice != 6);
