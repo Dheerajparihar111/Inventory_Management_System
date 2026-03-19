@@ -1,4 +1,5 @@
-public class Product {
+class Product {
+
     String name;
     int quantity;
 

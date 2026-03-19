@@ -13,12 +13,11 @@ public class Main {
 
         do {
 
-            System.out.println("===== INVENTORY ======");
-            System.out.println("| 1) Add             |");
-            System.out.println("| 2) View            |");
-            System.out.println("| 3) Exit            |");
-            System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
-            System.out.print("Enter Your Choice : ");
+            System.out.println("\n===== INVENTORY =====");
+            System.out.println("1 Add");
+            System.out.println("2 View");
+            System.out.println("3 Update");
+            System.out.println("4 Exit");
 
             choice = input.nextInt();
             input.nextLine();
@@ -27,18 +26,18 @@ public class Main {
 
                 case 1:
                     addItem();
-                    System.out.println("Item Added Successfully");
                     break;
 
                 case 2:
                     viewItem();
                     break;
                 case 3:
-                    System.out.println("Thank You For Using Inventory Management System");
-                    System.exit(0);
+                    updateItem();
+                    break;
+
             }
 
-        } while (choice != 3);
+        } while (choice != 5);
 
     }
 
@@ -69,10 +68,42 @@ public class Main {
 
     static void viewItem() {
 
+        if (count == 0) {
+            System.out.println("Empty");
+            return;
+        }
+
         for (int i = 0; i < count; i++) {
             items[i].display();
         }
 
+    }
+
+
+
+
+
+    static void updateItem() {
+
+        System.out.print("Enter name: ");
+        String name = input.nextLine();
+
+        for (int i = 0; i < count; i++) {
+
+            if (items[i].name.equalsIgnoreCase(name)) {
+
+                System.out.print("New qty: ");
+                int q = input.nextInt();
+                input.nextLine();
+
+                items[i].quantity = q;
+
+                System.out.println("Updated");
+                return;
+            }
+        }
+
+        System.out.println("Not found");
     }
 
 }
