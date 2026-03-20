@@ -111,6 +111,8 @@ Price: 5
 
 Item Added
 ```
+<img width="1918" height="1022" alt="Inventory_Management_System output 1" src="https://github.com/user-attachments/assets/8186d32b-edbb-4473-9f27-a52a0c65b06c" />
+<img width="1916" height="1016" alt="Inventory_Management_System output 2" src="https://github.com/user-attachments/assets/49dbb8f3-810a-4607-abdc-6821065047f8" />
 
 ---
  Link : https://github.com/Dheerajparihar111/Inventory_Management_System
