@@ -113,7 +113,7 @@ Item Added
 ```
 
 ---
-
+ Link : https://github.com/Dheerajparihar111/Inventory_Management_System
 ## 🎯 Learning Concepts
 
 * Object Oriented Programming
@@ -125,17 +125,6 @@ Item Added
 
 ---
 
-## 🔥 Future Improvements
-
-* Total inventory value
-* File saving system
-* Login system
-* Bill generation
-* ArrayList version
-* GUI version (Swing / JavaFX)
-* Database connection
-
----
 
 ## 👨‍💻 Author
 
